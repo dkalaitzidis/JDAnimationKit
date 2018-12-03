@@ -77,11 +77,11 @@ extension Array where Element: Equatable {
 extension Double {
     
     func DegreesToRadians() -> Double {
-        return self * M_PI / 180.0
+        return self * .pi / 180.0
     }
     
     func RadiansToDegrees() -> Double {
-        return self * 180.0 / M_PI
+        return self * 180.0 / .pi
     }
 }
 
@@ -233,15 +233,15 @@ extension JDAnimationNode{
         switch timing{
             
         case .easeIn:
-            return CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseIn)
+            return CAMediaTimingFunction(name: .easeIn)
         case .easeOut:
-            return CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseOut)
+            return CAMediaTimingFunction(name: .easeOut)
         case .easeInOut:
-            return CAMediaTimingFunction(name:kCAMediaTimingFunctionEaseInEaseOut)
+            return CAMediaTimingFunction(name: .easeInEaseOut)
         case .linear:
-            return CAMediaTimingFunction(name:kCAMediaTimingFunctionLinear)
+            return CAMediaTimingFunction(name: .linear)
         case .none:
-            return CAMediaTimingFunction(name:kCAMediaTimingFunctionDefault)
+            return CAMediaTimingFunction(name: .default)
         }
     }
     
